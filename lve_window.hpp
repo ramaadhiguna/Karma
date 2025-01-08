@@ -9,8 +9,9 @@ namespace lve {
         public:
         LveWindow(int weight, int height, std::string windowName);
         ~LveWindow();
-
         bool shouldClose () { return glfwWindowShouldClose(window); }
+        void createWindowSurface (VkInstance instance, VkSurfaceKHR *surface);
+
         private:
             void initWindow();
             const int width;
